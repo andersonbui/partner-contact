@@ -8,19 +8,19 @@
         <field name="inherit_id" ref="base.view_partner_form" />
         <field name="arch" type="xml">
             <xpath expr="//form/sheet//field[@name='vat']" position="after">
-                <field name="identificacion"  />
+                <field t-if="identificacion" name="identificacion"  />
             </xpath>
             <xpath expr="//form/sheet//field[@name='category_id']" position="after">
-                <field name="fecha_nac"  />
+                <field name="fecha_nac" />
             </xpath>
             <xpath expr="//form/sheet//field[@name='category_id']" position="after">
-                <field name="edad" attrs="{'invisible': [('fecha_nac', '=', False)]}" />
+                <field name="mes_nac" attrs="{'invisible': True }" />
             </xpath>
         </field>
     </record>
 
     <record id="view_feha_nac_tree" model="ir.ui.view">
-        <field name="name">parner.tree.inherit.partner.fechanac</field>
+        <field name="name">partner.tree.inherit.partner.fechanac</field>
         <field name="model">res.partner</field>
         <field name="inherit_id" ref="base.view_partner_tree"/>
         <field name="arch" type="xml">
@@ -31,7 +31,7 @@
     </record>
 
     <record id="view_res_partner_view_filter" model="ir.ui.view">
-        <field name="name">res.parner.filter.inherit.res.partner</field>
+        <field name="name">res.partner.filter.inherit.res.partner</field>
         <field name="model">res.partner</field>
         <field name="inherit_id" ref="base.view_res_partner_filter"/>
         <field name="arch" type="xml">

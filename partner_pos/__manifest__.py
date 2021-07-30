@@ -18,7 +18,7 @@
     'version': '1.0',
 
     # any module necessary for this one to work correctly
-    'depends': ['account', 'point_of_sale'],
+    'depends': ['account', 'point_of_sale', 'contacts'],
 
     # always loaded
     'data': [

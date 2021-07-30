@@ -12,7 +12,6 @@ class ResPartner(models.Model):
                              string="Mes nacimiento", help="Mes de nacimiento",
                              store=True, readonly=True,
                              search='_search_mes_nac')
-    #, group_expand='_read_group_mes_nac'
     edad = fields.Integer(compute='_cacular_edad', string="Edad", store=False)
 
     @api.depends('fecha_nac')
@@ -27,6 +26,7 @@ class ResPartner(models.Model):
             print("error calculando mes_nac: "+str(err))
 
 
+    @api.depends('fecha_nac')
     def _cacular_edad(self):
         try:
             #for record in self: # store:True
@@ -38,6 +38,8 @@ class ResPartner(models.Model):
         except Exception as err:
             print("error calculando edad: "+str(err))
 
+
+    @api.depends('fecha_nac')
     def _search_mes_nac(self, operator, value):
         if operator == 'like':
             operator = 'ilike'
