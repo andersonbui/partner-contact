@@ -18,6 +18,7 @@ setuptools.setup(
         'odoo13-addon-partner_address_two_lines',
         'odoo13-addon-partner_affiliate',
         'odoo13-addon-partner_bank_active',
+        'odoo13-addon-partner_bank_sort_code',
         'odoo13-addon-partner_capital',
         'odoo13-addon-partner_coc',
         'odoo13-addon-partner_company_group',
@@ -33,6 +34,8 @@ setuptools.setup(
         'odoo13-addon-partner_contact_lang',
         'odoo13-addon-partner_contact_nationality',
         'odoo13-addon-partner_contact_personal_information_page',
+        'odoo13-addon-partner_country_lang',
+        'odoo13-addon-partner_data_vies_populator',
         'odoo13-addon-partner_deduplicate_acl',
         'odoo13-addon-partner_deduplicate_by_ref',
         'odoo13-addon-partner_deduplicate_by_website',
@@ -40,6 +43,7 @@ setuptools.setup(
         'odoo13-addon-partner_disable_gravatar',
         'odoo13-addon-partner_email_check',
         'odoo13-addon-partner_employee_quantity',
+        'odoo13-addon-partner_exception',
         'odoo13-addon-partner_external_map',
         'odoo13-addon-partner_fax',
         'odoo13-addon-partner_firstname',
@@ -54,9 +58,11 @@ setuptools.setup(
         'odoo13-addon-partner_phone_extension',
         'odoo13-addon-partner_phonecall_schedule',
         'odoo13-addon-partner_pricelist_search',
+        'odoo13-addon-partner_pricelist_tracking',
         'odoo13-addon-partner_priority',
         'odoo13-addon-partner_ref_unique',
         'odoo13-addon-partner_second_lastname',
+        'odoo13-addon-partner_stage',
         'odoo13-addon-partner_tz',
         'odoo13-addon-partner_vat_unique',
         'odoo13-addon-portal_partner_data_no_edit',
@@ -67,5 +73,6 @@ setuptools.setup(
     classifiers=[
         'Programming Language :: Python',
         'Framework :: Odoo',
+        'Framework :: Odoo :: 13.0',
     ]
 )
